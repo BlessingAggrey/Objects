@@ -6,7 +6,7 @@ function instagramPost( HandleOfAuthor, Content, ImageLink, NumberOfViews, Numbe
     this.ImageLink = ImageLink;
     this.NumberOfViews = NumberOfViews;
     this.NumberOfLikes = NumberOfLikes;
-}
+};
 
 //Question 2
 
@@ -25,7 +25,7 @@ function createPerson( Name, Age, Location) {
         Age: Age,
         Location: Location,
     }
-}
+};
 
 const musa = createPerson('Musa Dawodu', 19, 'Lekki-Lagos-Nigeria');
 console.log(musa);
@@ -39,7 +39,7 @@ function createJambScores(Eng, Govt, LIT, CRK) {
         LIT: LIT,
         CRK: CRK
     }
-}
+};
 
 const musasJambScores = createJambScores(70, 85, 82, 94);
 console.log(musasJambScores);
@@ -56,7 +56,7 @@ const firstSchool = {
     Name: 'All Saints University',
     Location: 'Dominica',
     NumberOfStudents: 1000,
-}
+};
 
 const secondSchool = Object.assign ( {}, firstSchool );
 console.log(firstSchool);
@@ -82,3 +82,18 @@ fourthSchool.Name = 'St Georges University';
 console.log({firstSchool});
 console.log({fourthSchool});
 
+//Question 5
+//for...in loops
+
+const PresidentialCandidates = {
+    AAC: 'Omoyele Sowore',
+    ACCORD: 'Christopher Imumolen',
+    APC: 'Bola Ahmed Tinubu',
+    LP: 'Peter Obi',
+    NNPP: 'Rabiu Kwankwaso',
+    PDP: 'Atiku Abubakar',
+};
+
+for (const properties in PresidentialCandidates) {
+    console.log(PresidentialCandidates[properties] + ' ' + 'is the presidential candidate of' + ' '+ properties)
+};
