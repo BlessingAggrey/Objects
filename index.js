@@ -42,4 +42,43 @@ function createJambScores(Eng, Govt, LIT, CRK) {
 }
 
 const musasJambScores = createJambScores(70, 85, 82, 94);
-console.log(musasJambScores)
+console.log(musasJambScores);
+
+//Adding the object as a property to musa object
+
+musa.musasJambScores = createJambScores(70, 85, 82, 94)
+console.log(musa);
+
+//Question 4
+//Option 1 - Using Object.assign ()
+
+const firstSchool = {
+    Name: 'All Saints University',
+    Location: 'Dominica',
+    NumberOfStudents: 1000,
+}
+
+const secondSchool = Object.assign ( {}, firstSchool );
+console.log(firstSchool);
+console.log(secondSchool);
+
+secondSchool.Name = 'Ross University';
+
+console.log('After change of name of second school');
+console.log(firstSchool);
+console.log(secondSchool);
+
+//Option 2 - Using spread syntax i.e, ...
+
+const thirdSchool = { ...firstSchool};
+thirdSchool.Name = 'St James University';
+console.log({firstSchool});
+console.log({thirdSchool});
+
+//Option 3 - Using the method JSON.Parse(JSON.stringify ())
+
+const fourthSchool = JSON.parse(JSON.stringify(firstSchool));
+fourthSchool.Name = 'St Georges University';
+console.log({firstSchool});
+console.log({fourthSchool});
+
